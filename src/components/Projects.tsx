@@ -28,7 +28,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80&w=500',
       tags: ['Web Design', 'UI/UX', 'Responsive'],
       links: {
-        demo: '#',
+        demo: 'https://claire-marie-portfolio.b12sites.com/index',
       },
     },
   ];

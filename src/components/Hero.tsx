@@ -50,11 +50,11 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex justify-start">
+          <div className="flex-1 flex justify-center md:justify-end">
             <img
               src="https://res.cloudinary.com/dulnfomcr/image/upload/v1741880955/Photo_braehn.jpg"
               alt="Keith Githinji"
-              className="rounded-2xl shadow-2xl w-96 h-auto object-cover -ml-8"
+              className="rounded-2xl shadow-2xl w-full max-w-md md:w-96 h-auto object-cover"
               style={{ height: '37rem' }}
             />
           </div>
