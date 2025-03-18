@@ -8,11 +8,11 @@ const Skills = () => {
     },
     {
       title: 'Backend Development',
-      skills: ['Node.js', 'Express', 'MongoDB', 'RESTful APIs', 'PostgreSQL'],
+      skills: ['Node.js', 'RESTful APIs', 'PostgreSQL', 'SQLite3'],
     },
     {
       title: 'Design Tools',
-      skills: ['Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'Sketch'],
+      skills: ['Figma', 'Adobe Photoshop', 'Webflow', 'WordPress'],
     },
     {
       title: 'Other Skills',
