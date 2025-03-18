@@ -25,23 +25,37 @@ const Hero = () => {
                 Get in Touch
               </a>
               <div className="flex space-x-4">
-                <a href="https://github.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <a
+                  href="https://github.com/DTS4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
                   <Github size={24} />
                 </a>
-                <a href="https://linkedin.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <a
+                  href="https://www.linkedin.com/in/keith-githinji-bb7b07242"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
                   <Linkedin size={24} />
                 </a>
-                <a href="mailto:contact@example.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <a
+                  href="mailto:keithgithinji@gmail.com"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
                   <Mail size={24} />
                 </a>
               </div>
             </div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 flex justify-start">
             <img
-              src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=500"
+              src="https://res.cloudinary.com/dulnfomcr/image/upload/v1741880955/Photo_braehn.jpg"
               alt="Keith Githinji"
-              className="rounded-2xl shadow-2xl"
+              className="rounded-2xl shadow-2xl w-96 h-auto object-cover -ml-8"
+              style={{ height: '37rem' }}
             />
           </div>
         </div>

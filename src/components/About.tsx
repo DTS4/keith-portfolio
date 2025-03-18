@@ -6,14 +6,14 @@ const About = () => {
     {
       icon: <GraduationCap size={24} />,
       title: 'Moringa School',
-      date: '2022',
+      date: '2024 - 2025',
       description: 'Full Stack Development Program',
     },
     {
       icon: <Code size={24} />,
-      title: 'SendIT Project',
+      title: 'Web Design',
       date: '2023',
-      description: 'Developed a parcel delivery application',
+      description: 'Designed and developed personal portfolios',
     },
     {
       icon: <Briefcase size={24} />,

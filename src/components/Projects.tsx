@@ -6,20 +6,20 @@ const Projects = () => {
     {
       title: 'SendIT',
       description: 'A parcel delivery application that allows users to send and track their packages in real-time.',
-      image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&q=80&w=500',
+      image: 'https://res.cloudinary.com/dulnfomcr/image/upload/v1742321247/Screenshot_from_2025-03-18_21-06-00_cpcbyz.png',
       tags: ['React', 'Node.js', 'MongoDB', 'Express'],
       links: {
-        demo: '#',
-        github: '#',
+        demo: 'https://sendit-git-main-keiths-projects-64bbf087.vercel.app/',
+        github: 'https://github.com/DTS4/sendit.git',
       },
     },
     {
-      title: 'Church Posters',
-      description: 'Collection of modern and engaging church event posters designed with attention to typography and visual hierarchy.',
+      title: 'Posters',
+      description: 'Collection of modern and engaging posters designed with attention to typography and visual hierarchy.',
       image: 'https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&q=80&w=500',
       tags: ['Photoshop', 'Illustrator', 'Typography'],
       links: {
-        demo: '#',
+        demo: 'https://res.cloudinary.com/dulnfomcr/image/upload/Businesscentrecatalogue-march1803_rzcgvx.pdf',
       },
     },
     {
@@ -65,6 +65,8 @@ const Projects = () => {
                   {project.links.demo && (
                     <a
                       href={project.links.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center text-blue-600 hover:text-blue-700"
                     >
                       <ExternalLink size={16} className="mr-1" />
@@ -74,6 +76,8 @@ const Projects = () => {
                   {project.links.github && (
                     <a
                       href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center text-gray-600 hover:text-gray-700"
                     >
                       <Github size={16} className="mr-1" />
