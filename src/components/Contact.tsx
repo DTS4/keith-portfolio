@@ -1,26 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const [state, handleSubmit] = useForm('mzzezleb');
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -33,11 +16,11 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-blue-600 mr-3" />
-                <span>contact@example.com</span>
+                <span>keithgithinji@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-blue-600 mr-3" />
-                <span>+254 123 456 789</span>
+                <span>+254 799 201 375</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 text-blue-600 mr-3" />
@@ -63,11 +46,10 @@ const Contact = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
+              <ValidationError prefix="Name" field="name" errors={state.errors} />
             </div>
 
             <div>
@@ -78,11 +60,10 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
+              <ValidationError prefix="Email" field="email" errors={state.errors} />
             </div>
 
             <div>
@@ -93,11 +74,10 @@ const Contact = () => {
                 type="text"
                 id="subject"
                 name="subject"
-                value={formData.subject}
-                onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
+              <ValidationError prefix="Subject" field="subject" errors={state.errors} />
             </div>
 
             <div>
@@ -107,21 +87,27 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
                 rows={4}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               ></textarea>
+              <ValidationError prefix="Message" field="message" errors={state.errors} />
             </div>
 
             <button
               type="submit"
+              disabled={state.submitting}
               className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
             >
               <Send className="w-4 h-4 mr-2" />
-              Send Message
+              {state.submitting ? 'Sending...' : 'Send Message'}
             </button>
+
+            {state.succeeded && (
+              <p className="text-green-600 text-center mt-4">
+                Thanks for your message! I'll get back to you soon.
+              </p>
+            )}
           </form>
         </div>
       </div>
